@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Administración – ÑE’ÊTECH UEP</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>body{background:var(--bg)}.box{max-width:420px;margin:12vh auto;padding:32px}.box h1{color:var(--blue);font-size:1.5rem}
+label{display:block;font-weight:600;font-size:.88rem;margin:12px 0 4px;color:var(--blue)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;background:#fff}
+textarea{min-height:90px;resize:vertical}.err{color:#C0262D;font-weight:600;margin-top:10px;min-height:1.2em}.ok{color:#17803D}
+.tabs{display:flex;gap:8px;margin:20px 0}.tabs button{flex:1}.tabs .on{background:var(--orange);color:#fff;border-color:var(--orange)}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.form .full{grid-column:1/-1}
+.item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.item small{color:var(--mute)}.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.hint{font-size:.8rem;color:var(--mute);margin-top:3px}@media(max-width:700px){.form{grid-template-columns:1fr}}</style></head>
+<body>
+<div id="login" class="box card" style="display:none"><h1>Administración<br>ÑE’ÊTECH UEP</h1>
+<label>Usuario</label><input id="u" autocomplete="username"><label>Contraseña</label><input id="p" type="password" autocomplete="current-password">
+<div class="err" id="le"></div><button class="btn" style="width:100%;margin-top:8px" id="lb">Ingresar</button></div>
+<div id="panel" style="display:none"><div class="wrap">
+ <div class="top"><h1 style="color:var(--blue);margin:0">Panel de administración</h1><span><a class="btn s g" href="/">Ver sitio</a> <button class="btn s b" id="out">Salir</button></span></div>
+ <div class="tabs"><button class="btn g" data-t="articles">Artículos</button><button class="btn g" data-t="podcasts">Podcasts</button><button class="btn g" data-t="comics">Cómics</button></div>
+ <div class="card"><h2 id="ft" style="color:var(--blue);font-size:1.2rem"></h2><div class="form" id="form"></div>
+ <div class="err" id="fe"></div><div style="margin-top:12px;display:flex;gap:10px"><button class="btn b" id="save">Guardar</button><button class="btn g" id="cancel" style="display:none">Cancelar edición</button></div>
+ <p class="hint">En Google Drive: clic derecho en el archivo → Compartir → “Cualquier persona con el enlace” (Lector) → Copiar enlace, y pegarlo aquí.</p></div>
+ <div class="card" style="margin-top:20px"><h2 style="color:var(--blue);font-size:1.2rem">Publicado</h2><div id="items"></div></div>
+</div></div>
+<script src="/js/admin.js"></script></body></html>
